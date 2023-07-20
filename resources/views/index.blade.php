@@ -3,12 +3,12 @@
 @section('content')
     <div class="container ">
         <div class="row">
-            <div class="col">
+            <div class="col text-center">
                 <h1>Città visitate</h1>
-                <ul>
+                <ul class="list-unstyled">
                     @foreach( $projects as $project)
 
-                        <a href="{{ route('show', $project -> id) }}">
+                        <a class="text-dark" href="{{ route('show', $project -> id) }}">
                             <li>{{ $project -> city}}</li>
                         </a>
             
