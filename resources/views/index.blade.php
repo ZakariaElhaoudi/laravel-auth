@@ -4,7 +4,7 @@
     <div class="container ">
         <div class="row">
             <div class="col">
-                <h1>All Projects</h1>
+                <h1>Città visitate</h1>
                 <ul>
                     @foreach( $projects as $project)
 

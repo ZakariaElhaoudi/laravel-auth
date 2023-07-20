@@ -30,14 +30,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::middleware('auth')->group(function () {
+    Route :: get("/", [ProjectController :: class, "index"])-> name('index');
+    Route :: get("/show{id}", [ProjectController :: class, "show"])-> name('show');    
 });
 
-Route :: get("/", [ProjectController :: class, "index"])
-    -> name('index');
-
-Route :: get("/show{id}", [ProjectController :: class, "show"])
-    -> name('show');
 
 require __DIR__.'/auth.php';
